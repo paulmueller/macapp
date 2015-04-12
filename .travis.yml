@@ -7,4 +7,7 @@ before_install:
   - brew update
   - brew outdated xctool || brew upgrade xctool
   - brew install wxpython
+  - brew install pyinstaller
+  
+install: true
 
