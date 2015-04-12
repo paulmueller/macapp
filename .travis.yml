@@ -1,0 +1,9 @@
+os:
+  - osx
+language: python
+python:
+    - "2.7"
+before_install:
+  - brew update
+  - brew outdated xctool || brew upgrade xctool
+  - brew install wxpython
