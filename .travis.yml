@@ -14,7 +14,18 @@ before_install:
   #- echo 'import site; site.addsitedir("/usr/local/lib/python2.7/site-packages")' >> /Users/travis/Library/Python/2.7/lib/python/site-packages/homebrew.pth
 
 
-  - pyinstaller --noconsole --icon=calc.ico --onefile
+  - pyinstaller --noconsole --icon=calc.ico --onefile hw.py
 
 install: true
+
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: 
+  file: dist/hw.app
+  on:
+    tags: true
+    all_branches: true
+    repo: BjornFJohansson/macapp
 
