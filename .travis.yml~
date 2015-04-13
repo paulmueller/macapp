@@ -1,31 +1,20 @@
 os:
-  - osx
+- osx
 language: objective-c
 python:
-    - "2.7"
+- '2.7'
 before_install:
-  - brew update
-  - brew outdated xctool || brew upgrade xctool
-  - brew install python
-  - brew install wxpython
-  #- brew install brew-pip
-  - pip install pyinstaller
-  #- mkdir -p /Users/travis/Library/Python/2.7/lib/python/site-packages
-  #- echo 'import site; site.addsitedir("/usr/local/lib/python2.7/site-packages")' >> /Users/travis/Library/Python/2.7/lib/python/site-packages/homebrew.pth
-
-
-  - pyinstaller --noconsole --onefile hw.py
-
+- brew update
+- brew outdated xctool || brew upgrade xctool
+- brew install python
+- brew install wxpython
+- pip install pyinstaller
+- pyinstaller --noconsole --onefile hw.py
 install: true
-
 deploy:
-  skip_cleanup: true
   provider: releases
   api_key:
-    secure: 
+    secure: VK1oVWQCRomgcFNVua00B3YSsotezzU1p6/fh73/0vwQFzVMolVnAsnfSq6EAwIcJvakU0TI9pqZR+0S3PKnUs+Kn3Ar8OwQ88t2azZNwewBfKua3tM2/7BF4y7O0gOtN1F29Yxyu0zPInIVY17BqGygibQ1kthBTm+tj3YyNW8=
   file: dist/hw.app
   on:
-    tags: true
-    all_branches: true
     repo: BjornFJohansson/macapp
-

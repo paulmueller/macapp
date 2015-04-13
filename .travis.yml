@@ -10,6 +10,7 @@ before_install:
 - brew install wxpython
 - pip install pyinstaller
 - pyinstaller --noconsole --onefile hw.py
+- ls
 install: true
 deploy:
   provider: releases
