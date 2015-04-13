@@ -14,7 +14,7 @@ before_install:
   #- echo 'import site; site.addsitedir("/usr/local/lib/python2.7/site-packages")' >> /Users/travis/Library/Python/2.7/lib/python/site-packages/homebrew.pth
 
 
-  - pyinstaller --noconsole --icon=calc.ico --onefile hw.py
+  - pyinstaller --noconsole --onefile hw.py
 
 install: true
 
