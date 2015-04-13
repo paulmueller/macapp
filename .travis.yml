@@ -18,4 +18,6 @@ deploy:
     secure: VK1oVWQCRomgcFNVua00B3YSsotezzU1p6/fh73/0vwQFzVMolVnAsnfSq6EAwIcJvakU0TI9pqZR+0S3PKnUs+Kn3Ar8OwQ88t2azZNwewBfKua3tM2/7BF4y7O0gOtN1F29Yxyu0zPInIVY17BqGygibQ1kthBTm+tj3YyNW8=
   file: dist/hw.app
   on:
+    tags: true
+    all_branches: true
     repo: BjornFJohansson/macapp
