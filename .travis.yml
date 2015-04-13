@@ -11,6 +11,7 @@ before_install:
 - pip install pyinstaller
 - pyinstaller --noconsole --onefile hw.py
 - ls
+- ls build/
 install: true
 deploy:
   provider: releases
