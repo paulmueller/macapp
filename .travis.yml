@@ -26,3 +26,6 @@ deploy:
 
 
 # http://stackoverflow.com/questions/25961639/where-is-travis-ci-expecting-the-artifacts-on-deployment
+# http://stackoverflow.com/questions/19607894/how-to-get-travis-ci-to-build-and-test-xcode-projects-hosted-on-github
+# https://travis-ci.org/chrissearle/web-hello-world
+# http://pythonhosted.org/PyInstaller/#options-for-mac-os-x-apps
