@@ -11,7 +11,8 @@ before_install:
 - pip install pyinstaller
 - pyinstaller --noconsole --onefile hw.py
 - ls
-- ls dist/
+- ls build/
+- ls build/hw/
 install: true
 deploy:
   skip_cleanup: true
