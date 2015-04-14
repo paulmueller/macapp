@@ -12,7 +12,7 @@ before_install:
 - pyinstaller --noconsole --onefile hw.py
 - ls
 - ls dist/
-- hdiutil create dist/hw.dmg -srcfolder dist/hw.app -ov
+- hdiutil create dist/hw.dmg -srcfolder dist/ -ov
 install: true
 deploy:
   skip_cleanup: true
