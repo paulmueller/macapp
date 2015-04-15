@@ -10,6 +10,7 @@ before_install:
 - brew install python
 - which python
 - brew install wxpython
+- python -c "import wx; print wx.__version__"
 - pip install pyinstaller
 - pyinstaller --noconsole --onefile hw.py
 - ls

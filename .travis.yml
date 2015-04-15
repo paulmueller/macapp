@@ -7,7 +7,7 @@ before_install:
 - which python
 - brew update
 - brew outdated xctool || brew upgrade xctool
-- brew install python
+- brew install python --framework 
 - which python
 - brew install wxpython
 - python -c "import wx; print wx.__version__"
