@@ -9,7 +9,7 @@ before_install:
 - brew outdated xctool || brew upgrade xctool
 - brew install python --framework 
 - which python
-- export VERSIONER_PYTHON_PREFER_32_BIT=yes arch -i386 /usr/local/opt/python/bin/python2.7
+- VERSIONER_PYTHON_PREFER_32_BIT=yes arch -i386 /usr/local/opt/python/bin/python2.7
 - which python
 - brew install wxpython
 - python -c "import wx; print wx.__version__"
@@ -19,6 +19,7 @@ before_install:
 - ls
 - ls dist/
 - hdiutil create dist/hw.dmg -srcfolder dist/ -ov
+#- zip -r dist/macapp.zip dist/macapp.app
 install: true
 deploy:
   skip_cleanup: true
@@ -28,6 +29,7 @@ deploy:
   file: 
     - "dist/hw"
     - "dist/hw.dmg"
+    #- "dist/macapp.zip"
   on:
     tags: true
     all_branches: true
