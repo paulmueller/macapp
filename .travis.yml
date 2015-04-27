@@ -22,7 +22,7 @@ before_install:
 - ls
 - ls dist/
 - hdiutil create dist/hw.dmg -srcfolder dist/ -ov
-#- zip -r dist/macapp.zip dist/macapp.app
+- zip -r dist/macapp.zip dist/macapp.app
 install: true
 deploy:
   skip_cleanup: true
@@ -32,7 +32,7 @@ deploy:
   file: 
     - "dist/hw"
     - "dist/hw.dmg"
-    #- "dist/macapp.zip"
+    - "dist/macapp.zip"
   on:
     tags: true
     all_branches: true
