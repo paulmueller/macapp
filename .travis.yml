@@ -7,7 +7,7 @@ before_install:
 - which python
 - brew update
 - brew outdated xctool || brew upgrade xctool
-- brew install python --framework 
+- brew install python --universal --framework 
 - which python
 - VERSIONER_PYTHON_PREFER_32_BIT=yes arch -i386 /usr/local/opt/python/bin/python2.7
 - which python
@@ -35,6 +35,10 @@ deploy:
     all_branches: true
     repo: BjornFJohansson/macapp
 
+#brew install python --universal
+
+#http://stackoverflow.com/questions/19403532/run-python-32-bit-and-python-64-bit-in-separate-virtual-environments-homebrew-i
+#http://stackoverflow.com/questions/2088569/how-do-i-force-python-to-be-32-bit-on-snow-leopard-and-other-32-bit-64-bit-quest
 
 # http://stackoverflow.com/questions/25961639/where-is-travis-ci-expecting-the-artifacts-on-deployment
 # http://stackoverflow.com/questions/19607894/how-to-get-travis-ci-to-build-and-test-xcode-projects-hosted-on-github

@@ -19,7 +19,7 @@ before_install:
 - ls
 - ls dist/
 - hdiutil create dist/hw.dmg -srcfolder dist/ -ov
-- zip -r dist/macapp.zip dist/macapp.app
+#- zip -r dist/macapp.zip dist/macapp.app
 install: true
 deploy:
   skip_cleanup: true
@@ -29,12 +29,16 @@ deploy:
   file: 
     - "dist/hw"
     - "dist/hw.dmg"
-    - "dist/macapp.zip"
+    #- "dist/macapp.zip"
   on:
     tags: true
     all_branches: true
     repo: BjornFJohansson/macapp
 
+brew install python --universal
+
+#http://stackoverflow.com/questions/19403532/run-python-32-bit-and-python-64-bit-in-separate-virtual-environments-homebrew-i
+#http://stackoverflow.com/questions/2088569/how-do-i-force-python-to-be-32-bit-on-snow-leopard-and-other-32-bit-64-bit-quest
 
 # http://stackoverflow.com/questions/25961639/where-is-travis-ci-expecting-the-artifacts-on-deployment
 # http://stackoverflow.com/questions/19607894/how-to-get-travis-ci-to-build-and-test-xcode-projects-hosted-on-github
