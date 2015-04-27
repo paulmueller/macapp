@@ -9,8 +9,11 @@ before_install:
 - brew outdated xctool || brew upgrade xctool
 - brew install python --framework 
 - which python
+- export VERSIONER_PYTHON_PREFER_32_BIT=yes arch -i386 /usr/local/opt/python/bin/python2.7
+- which python
 - brew install wxpython
 - python -c "import wx; print wx.__version__"
+- pip install -U py2app
 - pip install pyinstaller
 - pyinstaller --noconsole --onefile hw.py
 - ls
