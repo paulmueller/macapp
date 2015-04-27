@@ -1,5 +1,5 @@
-os:
-- osx
+#os:
+#- osx
 language: objective-c
 python:
 - '2.7'
@@ -7,10 +7,12 @@ before_install:
 - which python
 - brew update
 - brew outdated xctool || brew upgrade xctool
-- brew install python --universal
+- brew install readline sqlite gdbm makedepend openssl
+- brew install python --universal --framework
+#- brew install python --universal
 #- brew install python --universal --framework 
 - which python
-- VERSIONER_PYTHON_PREFER_32_BIT=yes arch -i386 /usr/local/opt/python/bin/python2.7
+- VERSIONER_PYTHON_PREFER_32_BIT=yes arch -i386 #/usr/local/opt/python/bin/python2.7
 - which python
 - brew install wxpython
 - python -c "import wx; print wx.__version__"
