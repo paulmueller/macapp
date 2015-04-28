@@ -17,7 +17,7 @@ before_install:
 - wget http://downloads.sourceforge.net/wxpython/wxPython3.0-osx-3.0.2.0-cocoa-py2.7.dmg
 - ls
 - cd ..
-- ./packages.sh
+- sudo ./packages.sh
 - arch -i386 python -c "import wx; print wx.__version__"
 - arch -i386 pip install pyinstaller
 - arch -i386 pyinstaller --noconsole --onefile hw.py
