@@ -4,12 +4,19 @@ python:
 before_install:
 - which python
 - brew install python --universal --framework
+- brew install wget
 - which python
 - export VERSIONER_PYTHON_PREFER_32_BIT=yes
 - defaults write com.apple.versioner.python Prefer-32-Bit -bool yes
 - which python
 - python --version
-- arch -i386 brew install wxpython --universal
+# https://github.com/Homebrew/homebrew/issues/34470
+#- arch -i386 brew install wxpython --universal
+- mkdir dl
+- cd dl
+- wget http://downloads.sourceforge.net/wxpython/wxPython3.0-osx-3.0.2.0-cocoa-py2.7.dmg
+- cd ..
+- ./packages
 - arch -i386 python -c "import wx; print wx.__version__"
 - arch -i386 pip install pyinstaller
 - arch -i386 pyinstaller --noconsole --onefile hw.py
