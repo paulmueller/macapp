@@ -22,16 +22,15 @@ before_install:
 - arch -i386 pip install pyinstaller
 - arch -i386 pyinstaller --noconsole --onefile hw.py
 - ls
-- ls dist/
 - hdiutil create dist/hw.dmg -srcfolder dist/ -ov
 - zip -r dist/hw.zip dist/hw.app
+- ls dist/
 install: true
 deploy:
   provider: releases
   api_key:
     secure: KjdN4hSHWU3ZDg6lpDNMB2we9jLayM9C8pwyQrV/Xzq8HNH5eNHP8ScI64tvnS0yJegOXnHFwUhUrkMtEs3X29TKrom+8tJ5E52IdBO7xO8fqOfeugC2239vLzc3tNI6RJX/K7CZTsSRu5U++1RJVgcWYjrCln87DuXG+HZRdOI=
   file: 
-    - "dist/hw"
     - "dist/hw.dmg"
     - "dist/hw.zip"
   on:
