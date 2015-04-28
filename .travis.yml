@@ -28,6 +28,7 @@ before_install:
 install: true
 deploy:
   provider: releases
+  skip_cleanup: true
   api_key:
     secure: KjdN4hSHWU3ZDg6lpDNMB2we9jLayM9C8pwyQrV/Xzq8HNH5eNHP8ScI64tvnS0yJegOXnHFwUhUrkMtEs3X29TKrom+8tJ5E52IdBO7xO8fqOfeugC2239vLzc3tNI6RJX/K7CZTsSRu5U++1RJVgcWYjrCln87DuXG+HZRdOI=
   file: 
